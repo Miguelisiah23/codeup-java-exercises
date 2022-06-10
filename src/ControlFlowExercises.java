@@ -1,42 +1,41 @@
-import java.util.Locale;
 import java.util.Scanner;
 
 public class ControlFlowExercises {
     public static void main(String[] args) {
 //         WHILE
-//        int i = 5;
-//        while (i <= 15) {
-//            System.out.printf("%d%n", i);
-//            i++;
-//        }
-////        DO WHILE
-//        int x = 0;
-//        do {
-//            x++;
-//            if (x % 2 == 0) {
-//                System.out.printf("%d%n", x);
-//            }
-//        } while (x <= 100);
-//
-//        int y = 100;
-//        do {
-//            System.out.printf("%d%n", y);
-//            y -= 5;
-//        } while (y >= -10);
-//
-//        long squared = 2;
-//        do {
-//            System.out.printf("%d%n",squared);
-//            squared *= squared;
-//        } while(squared < 1000000);
-//
-////        FOR LOOP
-//        for(int num = 100; num >=-10; num-=5) {
-//            System.out.printf("%d%n",num);
-//        }
-//        for(long sq = 2; sq < 1000000; sq*=sq){
-//            System.out.printf("%d%n",sq);
-//        }
+        int i = 5;
+        while (i <= 15) {
+            System.out.printf("%d%n", i);
+            i++;
+        }
+//        DO WHILE
+        int x = 0;
+        do {
+            x++;
+            if (x % 2 == 0) {
+                System.out.printf("%d%n", x);
+            }
+        } while (x <= 100);
+
+        int y = 100;
+        do {
+            System.out.printf("%d%n", y);
+            y -= 5;
+        } while (y >= -10);
+
+        long squared = 2;
+        do {
+            System.out.printf("%d%n",squared);
+            squared *= squared;
+        } while(squared < 1000000);
+
+//        FOR LOOP
+        for(int num = 100; num >=-10; num-=5) {
+            System.out.printf("%d%n",num);
+        }
+        for(long sq = 2; sq < 1000000; sq*=sq){
+            System.out.printf("%d%n",sq);
+        }
 //        FizzBuzz
         for (int numbers = 1; numbers <= 100; numbers++) {
             if (numbers % 3 == 0 && numbers % 5 == 0) {
@@ -54,7 +53,7 @@ public class ControlFlowExercises {
         while (answer.equalsIgnoreCase("yes")) {
             System.out.println("What number would you like to go up to?");
             int userInput = scanner.nextInt();
-            System.out.println("Heres your table !");
+            System.out.println("Here is your table !");
             System.out.println("Number | Squared | Cubed");
             System.out.println("------ | ------- | -----");
 
