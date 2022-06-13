@@ -5,7 +5,7 @@ public class ControlFlowExercises {
 //         WHILE
         int i = 5;
         while (i <= 15) {
-            System.out.printf("%d%n", i);
+            System.out.printf("%d ", i);
             i++;
         }
 //        DO WHILE
@@ -13,7 +13,7 @@ public class ControlFlowExercises {
         do {
             x++;
             if (x % 2 == 0) {
-                System.out.printf("%d%n", x);
+                System.out.printf("%n%d%n", x);
             }
         } while (x <= 100);
 
@@ -53,14 +53,14 @@ public class ControlFlowExercises {
         while (answer.equalsIgnoreCase("yes")) {
             System.out.println("What number would you like to go up to?");
             int userInput = scanner.nextInt();
-            System.out.println("Here is your table !");
+            System.out.println("Here is your table !%n");
             System.out.println("Number | Squared | Cubed");
             System.out.println("------ | ------- | -----");
 
             for (long table = 1; table <= userInput; table++) {
                 long square = table * table;
                 long cube = (table * table) * table;
-                System.out.printf("%d      | %d       | %d     %n", table, square, cube);
+                System.out.printf("%-6d | %-7d | %d%n", table, square, cube);
             }
             System.out.println("Would you like to try another number ?");
             answer = scanner.next();
