@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class MethodsExercises {
 
-//    public static int Addition(int num1, int num2) {
+    //    public static int Addition(int num1, int num2) {
 //        return num1 + num2;
 //    }
 //
@@ -68,24 +68,28 @@ public class MethodsExercises {
 //        }
 //        return factorial;
 //    }
-    public static void RollDice(){
+    public static void RollDice() {
         System.out.println("How many sides on dice?");
         Scanner scanner = new Scanner(System.in);
         int input = scanner.nextInt();
+        RandomIntegers(input);
+    }
+
+    public static void RandomIntegers(int input) {
+        Scanner scanner = new Scanner(System.in);
         Random random = new Random();
         int dice1 = random.nextInt((input + 1) - 1) + 1;
-        int dice2 = random.nextInt((input + 1)- 1) + 1;
+        int dice2 = random.nextInt((input + 1) - 1) + 1;
         System.out.println("Roll? [Y/N]");
         String roll = scanner.next().toLowerCase();
-        if(roll.equals("y")){
-            System.out.printf("You rolled a %d and a %d!%n",dice1,dice2);
+        if (roll.equals("y")) {
+            System.out.printf("You rolled a %d and a %d!%n", dice1, dice2);
         }
         System.out.println("Roll again ? [Y/N]");
         roll = scanner.next().toLowerCase();
-        if(roll.equals("y")){
-            RollDice();
+        if (roll.equals("y")) {
+            RandomIntegers(input);
         }
-
     }
 
     public static void main(String[] args) {
@@ -97,7 +101,7 @@ public class MethodsExercises {
 //        int userInput = GetInteger(1, 50);
 //        System.out.println(userInput);
 //        getFactorial();
-RollDice();
+        RollDice();
 
     }
 
