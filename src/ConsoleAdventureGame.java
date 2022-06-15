@@ -95,7 +95,7 @@ public class ConsoleAdventureGame {
         if (read.equals("")) {
             System.out.printf("""
                     ******
-                    You finally arrive at your destination but they are under attack by goblins!
+                    You finally arrive at your destination but they are under attack by DRAGONS!
                     %s, The %s! TAKE THEM OUT!
                     ******
                     """, name, type);
