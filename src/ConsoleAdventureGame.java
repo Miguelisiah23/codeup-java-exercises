@@ -124,7 +124,7 @@ public class ConsoleAdventureGame {
         System.out.println("You can gamble real quick if you fancy a good time![Gamble]/[Continue]");
         String read = scanner.next();
         if (read.equalsIgnoreCase("gamble")) {
-            attackPoints = (miniGame(attackPoints));
+            attackPoints = miniGame(attackPoints);
         }
         beginQuest(type, name);
         String enterOrNot = scanner.next();
