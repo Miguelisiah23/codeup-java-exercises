@@ -8,13 +8,15 @@ public class Circle {
     }
 
     public double getArea() {
-        Double area =(this.radius * this.radius) * 3.14;
+       Double pi = Math.PI;
+        Double area =(this.radius * this.radius) * pi;
         System.out.printf("Area: %f",area);
         return area;
     }
 
     public double getCircumference() {
-      double circum = 2 * 3.14 * this.radius;
+        Double pi = Math.PI;
+      double circum = 2 * pi * this.radius;
         System.out.printf("Circumference: %f",circum);
         return circum;
     }

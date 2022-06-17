@@ -50,15 +50,18 @@ public class Input {
     }
 
     public int getInt() {
+        System.out.println("Enter a number");
         int input = scanner.nextInt();
         return input;
     }
     public int getInt(String prompt){
         System.out.println(prompt);
-        return getInt();
+        int input = scanner.nextInt();
+        return input;
     }
 
     public Double getDouble(double min, double max) {
+        System.out.printf("Enter a number between %f and %f",min,max);
         double input = scanner.nextInt();
         if (input < min || input > max) {
             getDouble(min, max);
@@ -69,19 +72,21 @@ public class Input {
         System.out.println(prompt);
         double input = scanner.nextInt();
         if (input < min || input > max) {
-            getDouble(min, max);
+            getDouble(prompt,min, max);
         }
         return input;
     }
 
     public Double getDouble() {
+        System.out.println("Enter a number");
         double input = scanner.nextDouble();
         return input;
 
     }
     public Double getDouble(String prompt) {
         System.out.println(prompt);
-        return getDouble();
+        double input = scanner.nextDouble();
+        return input;
 
     }
 }
