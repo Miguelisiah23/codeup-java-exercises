@@ -10,24 +10,30 @@ public class Input {
     }
 
     public String getString() {
+        System.out.println("Say something..");
         String input = scanner.nextLine();
         return String.format(input);
     }
     public String getString(String prompt){
         System.out.println(prompt);
-        return getString();
+        String input = scanner.nextLine();
+        return String.format(input);
     }
 
     public boolean yesNo() {
+        System.out.println("Yay or nay ?");
         String str = scanner.next();
-        return str.equalsIgnoreCase("y") || str.equalsIgnoreCase("yes") || str.equalsIgnoreCase("yea");
+        return str.equalsIgnoreCase("y") || str.equalsIgnoreCase("yes") || str.equalsIgnoreCase("yea") || str.equalsIgnoreCase("yay");
     }
     public boolean yesNo(String prompt){
         System.out.println(prompt);
-        return yesNo();
+        String str = scanner.next();
+        return str.equalsIgnoreCase("y") || str.equalsIgnoreCase("yes") || str.equalsIgnoreCase("yea") || str.equalsIgnoreCase("yay");
+
     }
 
     public int getInt(int min, int max) {
+        System.out.printf("Enter number between %d and %d%n",min,max);
         int input = scanner.nextInt();
         if (input < min || input > max) {
             getInt(min, max);
@@ -36,7 +42,11 @@ public class Input {
     }
     public int getInt(String prompt, int min, int max){
         System.out.println(prompt);
-       return getInt(min,max);
+        int input = scanner.nextInt();
+        if (input < min || input > max) {
+            getInt(min, max);
+        }
+        return input;
     }
 
     public int getInt() {
