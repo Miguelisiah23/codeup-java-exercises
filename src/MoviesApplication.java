@@ -26,6 +26,8 @@ public class MoviesApplication {
         String str = input.getString("Continue Browsing? [Y/N]");
         if(str.equalsIgnoreCase("y")){
             filterMovies(arr);
+        } else {
+            System.err.println("Goodbye!");
         }
 
     }
