@@ -21,10 +21,11 @@ public class MoviesApplication {
             }
         }
     }
-    public static void contBrowsing(Movie[] arr){
+
+    public static void contBrowsing(Movie[] arr) {
         Input input = new Input();
         String str = input.getString("Continue Browsing? [Y/N]");
-        if(str.equalsIgnoreCase("y")){
+        if (str.equalsIgnoreCase("y")) {
             filterMovies(arr);
         } else {
             System.err.println("Goodbye!");
@@ -72,7 +73,6 @@ public class MoviesApplication {
             filterMovies(arr);
         }
     }
-
 
     public static Movie[] addMovie(Movie[] arr, String movieTitle, String category) {
         Movie[] newArr = Arrays.copyOf(arr, arr.length + 1);
