@@ -7,7 +7,7 @@ public class Input {
 
 
     public String getString() {
-        System.out.println("Say something..");
+        System.out.println("Enter an input");
         String input = scanner.nextLine();
         return String.format(input);
     }
@@ -51,8 +51,13 @@ public class Input {
 
     public int getInt() {
         System.out.println("Enter a number");
-        int input = scanner.nextInt();
-        return input;
+        String input = getString();
+        try {
+            return Integer.parseInt(input);
+        } catch (NumberFormatException nfe) {
+            nfe.printStackTrace();
+            return getInt();
+        }
     }
 
     public int getInt(String prompt) {
@@ -80,9 +85,15 @@ public class Input {
     }
 
     public double getDouble() {
-        System.out.println("Enter a number");
-        double input = scanner.nextDouble();
-        return input;
+        try {
+            System.out.println("Enter a number");
+            String input = getString();
+            return Double.parseDouble(input);
+        } catch (NumberFormatException nfe) {
+            nfe.printStackTrace();
+            return getDouble();
+        }
+
 
     }
 
