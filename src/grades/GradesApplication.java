@@ -1,9 +1,12 @@
+package grades;
+
+import grades.Student;
 import util.Input;
 
 import java.util.HashMap;
 
 public class GradesApplication {
-    public static void overallAverage(HashMap<String,Student> students){
+    public static void overallAverage(HashMap<String, Student> students){
         double x = 0;
         for(HashMap.Entry<String,Student> entry : students.entrySet()){
             x += entry.getValue().getGradeAverage();

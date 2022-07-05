@@ -67,22 +67,23 @@ public class Input {
     }
 
     public double getDouble(double min, double max) {
-        System.out.printf("Enter a number between %f and %f%n", min, max);
-        double input = scanner.nextDouble();
-        if (input < min || input > max) {
-          return  getDouble(min, max);
+        double input;
+        try {
+            do {
+                String userInput = getString("Enter a number between " + min + " and " + max + ".");
+                input = Double.parseDouble(userInput);
+                if (input < min || input > max) {
+                    System.out.println("Input invalid");
+                }
+            } while (input < min || input > max);
+            System.out.println("Input acceptable");
+            return input;
+        } catch (NumberFormatException nfe) {
+            nfe.printStackTrace();
+            return getDouble(min, max);
         }
-        return input;
     }
 
-    public double getDouble(String prompt, double min, double max) {
-        System.out.println(prompt);
-        double input = scanner.nextDouble();
-        if (input < min || input > max) {
-           return getDouble(prompt, min, max);
-        }
-        return input;
-    }
 
     public double getDouble() {
         try {
