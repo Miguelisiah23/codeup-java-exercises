@@ -98,11 +98,5 @@ public class Input {
 
     }
 
-    public double getDouble(String prompt) {
-        System.out.println(prompt);
-        double input = scanner.nextDouble();
-        return input;
-
-    }
 }
 
